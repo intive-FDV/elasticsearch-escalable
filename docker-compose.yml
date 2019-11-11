@@ -55,6 +55,19 @@ services:
       - esdata3:/usr/share/elasticsearch/data
     networks:
       - esnet
+#  servicio_cargar_documentos:
+#    image: cargar_documentos
+#    container_name: c_cargar_documentos
+#    environment:
+#      - ELS_HOSTNAME=elasticsearch
+#      - ELS_POST=9200
+#      - INPUT_FILES_PATH=data
+#    networks:
+#      - esnet
+#    depends_on:
+#      - elasticsearch
+#      - elasticsearch2
+#      - elasticsearch3
 
   kibana:
     image: 'docker.elastic.co/kibana/kibana:6.3.2'

@@ -1,0 +1,187 @@
+{
+    "index": "peliculas",
+    "docType": "pelicula",
+    "docs": [{
+	"imdb" : 3184482,
+	"editorial" : {
+		"id":4,
+		"nombre": "Prentice Hall ES",
+		"telefono": "+47 5353-3535",
+		"ciudad": "Madrid"
+	},
+	"titulo" : "Análisis Estructurado Moderno",
+	"precio" : 325,
+	"autores" : [
+		{
+			"id": 3,
+			"nombre": "Pérez",
+			"fecha_nacimiento": "1951-12-08T00:00:00"
+		},
+		{
+			"id": 4,
+			"nombre": "Aho",
+			"fecha_nacimiento": "1940-02-11T00:00:00"
+		},
+		{
+			"id": 5,
+			"nombre": "Ullman",
+			"fecha_nacimiento": "1947-08-12T00:00:00"
+		},
+		{
+			"id": 6,
+			"nombre": "Mendelzon",
+			"fecha_nacimiento": "1953-03-06T00:00:00"
+		},
+		
+		{
+			"id": 1,
+			"nombre": "Elmasri",
+			"fecha_nacimiento": "1967-03-01T00:00:00"
+		},
+		{
+			"id": 2,
+			"nombre": "Ramakrishnah",
+			"fecha_nacimiento": "1957-09-01T00:00:00"
+		}	
+	]
+},
+
+
+
+{
+	"imdb" : 2568478,
+	"editorial" : {
+		"id":3,
+		"nombre": "EUDEBA",
+		"telefono": "5353-2345",
+		"ciudad": "Buenos Aires"
+	},
+	"titulo" : "Sistemas Operativos",
+	"precio" : 250,
+	"autores" : [
+		{
+			"id": 1,
+			"nombre": "Elmasri",
+			"fecha_nacimiento": "1967-03-01T00:00:00"
+		}	
+	]
+},
+
+
+
+
+{
+	"imdb" : 1568478,
+	"editorial" : {
+		"id":3,
+		"nombre": "EUDEBA",
+		"telefono": "5353-2345",
+		"ciudad": "Buenos Aires"
+	},
+	"titulo" : "Arqutiectura del Computador",
+	"precio" : 250,
+	"autores" : [
+		{
+			"id": 2,
+			"nombre": "Ramakrishnah",
+			"fecha_nacimiento": "1957-09-01T00:00:00"
+		}		
+	]
+},
+
+
+
+{
+	"imdb" : 4414148,
+	"editorial" : {
+		"id":3,
+		"nombre": "EUDEBA",
+		"telefono": "5353-2345",
+		"ciudad": "Buenos Aires"
+	},
+	"titulo" : "Estructuras de datos y Algoritmos",
+	"precio" : 621.15,
+	"autores" : [
+		{
+			"id": 1,
+			"nombre": "Elmasri",
+			"fecha_nacimiento": "1967-03-01T00:00:00"
+		},
+		{
+			"id": 2,
+			"nombre": "Ramakrishnah",
+			"fecha_nacimiento": "1957-09-01T00:00:00"
+		}		
+	]
+},
+
+
+
+{
+	"imdb" : 8818463,
+	"editorial" : {
+		"id":2,
+		"nombre": "Mc Graw Hill",
+		"telefono": "5353-3535",
+		"ciudad": "Buenos Aires"
+	},
+	"titulo" : "Bases de datos Relacionales",
+	"precio" : 280,
+	"autores" : [
+		{
+			"id": 4,
+			"nombre": "Aho",
+			"fecha_nacimiento": "1940-02-11T00:00:00"
+		}	
+	]
+},
+
+
+
+
+
+{
+	"imdb" : 4168438,
+	"editorial" : {
+		"id":2,
+		"nombre": "Prentice Hall",
+		"telefono": "+1 555 1111-3535",
+		"ciudad": "Washington D.C"
+	},
+	"titulo" : "Database Management Systems",
+	"precio" : 621.15,
+	"autores" : [
+		{
+			"id": 6,
+			"nombre": "Mendelzon",
+			"fecha_nacimiento": "1953-03-06T00:00:00"
+		},
+		{
+			"id": 5,
+			"nombre": "Ullman",
+			"fecha_nacimiento": "1947-08-12T00:00:00"
+		}		
+	]
+},
+
+
+
+{
+	"imdb" : 5568478,
+	"editorial" : {
+		"id":2,
+		"nombre": "Siglo XXI",
+		"telefono": "5353-1234",
+		"ciudad": "Buenos Aires"
+	},
+	"titulo" : "Introducción a los SGBD",
+	"precio" : 250,
+	"autores" : [
+		{
+			"id": 1,
+			"nombre": "Elmasri",
+			"fecha_nacimiento": "1967-03-01T00:00:00"
+		}
+	]
+}
+]}
