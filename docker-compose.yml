@@ -13,12 +13,12 @@ services:
       memlock:
         soft: -1
         hard: -1
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:9200/"]
-      interval: 30s
-      timeout: 30s
-      start_period: 120s
-      retries: 4
+ #   healthcheck:
+ #     test: ["CMD", "curl", "-f", "http://localhost:9200/"]
+ #     interval: 30s
+ #     timeout: 30s
+ #     start_period: 120s
+ #     retries: 4
     volumes:
       - esdata1:/usr/share/elasticsearch/data
     ports:
@@ -61,24 +61,48 @@ services:
       - esdata3:/usr/share/elasticsearch/data
     networks:
       - esnet
-  servicio_cargar_documentos:
+
+#  servicio_cargar_documentos:
+#    build:
+#      context: ./nodeCargarDocumentos
+#      dockerfile: Dockerfile
+#    image: cargar_documentos:v3
+#    container_name: c_cargar_documentos
+#    environment:
+#      - ELS_HOSTNAME=elasticsearch
+#      - ELS_POST=9200
+#      - INPUT_FILES_PATH=data
+#    networks:
+#      - esnet
+## Opcional
+#    depends_on:
+#      elasticsearch:
+#        condition: service_healthy
+##    depends_on:
+##      - elasticsearch
+##    command:  ["wget", "-q", "http://elasticsearch:9200/", ";if [ $$? -ne 0 ]; then echo 1;fi"]
+
+
+  servicio_api_rest:
     build:
-      context: ./nodeCargarDocumentos
+      context: ./nodeAPI
       dockerfile: Dockerfile
-    image: cargar_documentos:v3
-    container_name: c_cargar_documentos
+    image: node_api_rest:v2
+    container_name: api_rest
     environment:
       - ELS_HOSTNAME=elasticsearch
       - ELS_POST=9200
       - INPUT_FILES_PATH=data
+    ports:
+      - 8080:8080
     networks:
       - esnet
-    depends_on:
-      elasticsearch:
-        condition: service_healthy
 #    depends_on:
-#      - elasticsearch
-#    command:  ["wget", "-q", "http://elasticsearch:9200/", ";if [ $$? -ne 0 ]; then echo 1;fi"]
+#      elasticsearch:
+#        condition: service_healthy
+#    ports:
+#      - 8080:8080
+
 
   kibana:
     image: 'docker.elastic.co/kibana/kibana:6.3.2'
