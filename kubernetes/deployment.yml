@@ -1,0 +1,31 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: elastic-api
+spec:
+  selector:
+    matchLabels:
+      app: elastic
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: elastic
+    spec:
+      containers:
+      - name: elasticsearch
+        image: docker.elastic.co/elasticsearch/elasticsearch:6.2.4
+        ports:
+        - containerPort: 9200
+      - name: api-rest
+        image: node_api_rest:v2
+        ports:
+        - containerPort: 8080
+        env:
+        - name: ELS_HOSTNAME
+          value: "elasticsearch"
+        - name: ELS_PORT
+          value: "9200"
+        - name: INPUT_FILES
+          value: "data"
+
