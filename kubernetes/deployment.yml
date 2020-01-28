@@ -23,7 +23,7 @@ spec:
         - containerPort: 8080
         env:
         - name: ELS_HOSTNAME
-          value: "elasticsearch"
+          value: "localhost"
         - name: ELS_PORT
           value: "9200"
         - name: INPUT_FILES
